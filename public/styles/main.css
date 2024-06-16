@@ -1,0 +1,164 @@
+html {
+    background-color: #1e3a5f;
+    min-height: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1e3a5f, #3b6978, #204051);
+  }
+  
+  main {
+    text-align: center;
+    flex: 1 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #fff;
+    padding: 10px;
+    font-size: 28px;
+  }
+  
+  .box {
+    max-width: 90%;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  #heading {
+    background: linear-gradient(135deg, #1e3a5f, #3b6978, #204051);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  form.edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 10px 0;
+  }
+  
+  .item:last-child {
+    border-bottom: 0;
+  }
+  
+  input[type="checkbox"] {
+    margin: 10px;
+  }
+  
+  p {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  button.add {
+    min-height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #3b6978;
+    color: #fff;
+    font-size: 24px;
+    border-width: 0;
+    margin-left: 10px;
+  }
+  
+  button.edit {
+    border: none;
+    background: none;
+  }
+  
+  .icon {
+    height: 24px;
+    width: 24px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    text-align: left;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 0;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #3b6978;
+  }
+  
+  ::placeholder {
+    color: lightgray;
+    opacity: 1;
+  }
+  
+  footer {
+    flex: 0 0 auto;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: #3b6978;
+  }
+  
+  @media (min-width: 768px) {
+    .box {
+      max-width: 600px;
+    }
+  
+    .item {
+      padding: 20px 0;
+    }
+  
+    p {
+      font-size: 18px;
+    }
+  
+    button.add {
+      min-height: 50px;
+      width: 50px;
+      font-size: 30px;
+    }
+  
+    .icon {
+      height: 30px;
+      width: 30px;
+    }
+  
+    input[type="text"],
+    input[type="number"] {
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+  

@@ -1,0 +1,44 @@
+<%- include('partials/header'); -%>
+
+<div class="box" id="heading">
+  <h1><%= listTitle %></h1>
+</div>
+
+<div class="box">
+  <% for (let item of listItems) { %>
+    <div class="item">
+      <form action="/delete" method="post">
+      <input type="checkbox" onchange="this.form.submit()" name="deleteHabitId" value="<%= item.id %>">
+      </form>
+
+      <p id="title<%= item.id %>"><%= item.title %></p>
+
+      <form class="edit" action="/edit" method="post">
+        <input type="hidden" name="updatedHabitId" value="<%= item.id %>">
+        <input id="input<%= item.id %>" type="text" name="updatedHabitTitle" value="<%= item.title %>" autocomplete="off" hidden>
+        <button id="done<%= item.id %>" class="edit" type="submit" hidden>
+          <img class="icon" src="/assets/icons/check-solid.svg" alt="tick icon">
+        </button>
+      </form>
+      <button id="edit<%= item.id %>" class="edit" onclick="editHandler('<%= item.id %>')">
+        <img class="icon" src="/assets/icons/pencil-solid.svg" alt="edit icon">
+      </button>
+    </div>
+  <% } %>
+
+  <form class="item" action="/add" method="post">
+    <input type="text" name="newHabit" placeholder="New Habit" autocomplete="off">
+    <button class="add" type="submit">+</button>
+  </form>
+</div>
+
+<script>
+  function editHandler(id) {
+    document.getElementById("title" + id).setAttribute("hidden", true);
+    document.getElementById("edit" + id).setAttribute("hidden", true);
+    document.getElementById("done" + id).removeAttribute("hidden");
+    document.getElementById("input" + id).removeAttribute("hidden");
+  }
+</script>
+
+<%- include('partials/footer'); -%>
